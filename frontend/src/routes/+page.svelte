@@ -7,7 +7,7 @@
   let todos = data.todos;
   
   async function deleteTodo(id: number) {
-    await fetch(`3.133.151.30:8000/delete/${id}`);
+    await fetch(`http://3.133.151.30:8000/delete/${id}`);
     invalidateAll();
   }
 </script>
@@ -15,7 +15,7 @@
 <div class="container mx-auto mt-16">
   <h1 class="text-5xl font-bold text-center underline m-10">Todos</h1>
   
-  <form action="3.133.151.30:8000/create" method="POST">
+  <form action="http://3.133.151.30:8000/create" method="POST">
     <input class="input my-4" type="text" name="id" placeholder="Enter Todo ID" />
     <input class="input my-4" type="text" name="title" placeholder="Enter Todo Title" />
     <input class="input my-4" type="text" name="description" placeholder="Enter Todo Description" />
