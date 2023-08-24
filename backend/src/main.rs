@@ -19,7 +19,7 @@ async fn main() -> Result<()> {
         .route("/update", post(update))
         .with_state(pool)
         .layer(CorsLayer::very_permissive());
-    let address  = SocketAddr::from(([0,0,0,0], 8000));
+    let address  = SocketAddr::from(([0,0,0,0], 443));
     Ok(axum::Server::bind(&address)
         .serve(app.into_make_service())
         .await?)
